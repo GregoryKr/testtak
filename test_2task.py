@@ -42,5 +42,6 @@ def test2_open_browser(browser):
 
     kamchatka_path = './/span[@title="Камчатский край"]'
     kamchatka_region = browser.find_element(By.XPATH, kamchatka_path)
-    kamchatka_region.click()
-    time.sleep(10)
+    # kamchatka_region.click()
+    # browser.get(kamchatka_region)
+
