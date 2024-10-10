@@ -6,9 +6,9 @@ from selenium.webdriver.common.by import By
 class TenzorLocators:
     TENZOR_BUNNER = (By.XPATH, './/a[@title = "tensor.ru"]')
     MORE_DETAILS = (By.XPATH, './/a[@href = "/about" and text()="Подробнее"]')
-    WORKING_BLOCK = (By.XPATH, './/h2[contains(@class, "tensor_ru-header-h2 tensor_ru-About__block-title")]')
+    WORKING_BLOCK = (By.XPATH, './/p[contains(@class, "tensor_ru-Index__card-title tensor_ru-pb-16") and contains(text(),'
+                               '"Сила в людях")]')
     PHOTOS_BLOCK = (By.XPATH, './/div[contains(@class, "tensor_ru-container tensor_ru-section tensor_ru-About__block3")]')
-    # KAMCHATKA_REGION = (By.XPATH, './/span[text()="41 Камчатский край"]')
 
 
 class SearchHelper(BasePage):
@@ -46,13 +46,4 @@ class SearchHelper(BasePage):
                 index += 1
                 return 'Фото одного размера'
 
-        # return partners_block.text
 
-    # def click_my_region(self):
-    #     my_region_link = self.find_element(SbisLocators.MY_REGION)
-    #     my_region_link.click()
-    #     return my_region_link
-    #
-    # def find_kamchatka_region(self):
-    #     kamchatka_region = self.find_element(SbisLocators.KAMCHATKA_REGION)
-    #     return kamchatka_region.text
