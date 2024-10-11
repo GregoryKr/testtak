@@ -15,7 +15,7 @@ class SbisLocators:
     PARTNERS_QUANTITY_NN = (By.XPATH, './/div[contains(@class, "sbisru-Contacts-City__item-count sbisru-Contacts__text--md ws-flex-shrink-0")]')
     PARTNERS_QUANTITY_KAMCHATKA = (By.XPATH, './/div[contains(@class, "sbisru-Contacts-City__item-count sbisru-Contacts__text--md ws-flex-shrink-0")]')
     KAMCHATKA_REGION = (By.XPATH, './/span[text()="41 Камчатский край"]')
-    KAMCHATKA_REGION_WEBPAGE_NAME = (By.TAG_NAME, 'title')
+    # KAMCHATKA_REGION_WEBPAGE_NAME = (By.TAG_NAME, 'title')
 
 
 class SearchHelper(BasePage):
@@ -57,7 +57,7 @@ class SearchHelper(BasePage):
         return partners_block
 
     def find_kamchatka_webpage_title(self):
-        title = self.find_element(SbisLocators.KAMCHATKA_REGION_WEBPAGE_NAME).text
+        title = self.driver.title
         print(title)
         return title
 
